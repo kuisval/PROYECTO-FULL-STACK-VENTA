@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import heroImg from './assets/hero.png'
-
-
+import { GlobalStyle } from './index'
 function App() {
   
 
   return (
     <>
-     <span>Hola Mundo</span>
+      
+      <div>
+        <GlobalStyle />
+        <span>Holaa</span>
+      </div>
     </>
   )
 }
