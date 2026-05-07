@@ -4,16 +4,18 @@ import { Device } from './styles/breakpoints'
 import styled, {ThemeProvider} from 'styled-components'
 
 function App() {
-  
+  const [sidebarOpen, setSideBarOpen] = useState(false);
   const {themeStyle} = useThemeStore();
   return (
     <>
     <ThemeProvider theme={themeStyle}>
         <Container>
           <GlobalStyle />
-          <section className='contentSideBar'><Sidebar /></section>
+          <section className='contentSideBar'>
+            <Sidebar state={sidebarOpen} setState={() => setSideBarOpen(!sidebarOpen)} /></section>
           <section className='contentMenuambur'>menu ambur</section>
-          <section className='contentRouters'><MyRouters /></section>
+          <section className='contentRouters'>
+            <MyRouters /></section>
       </Container>
     </ThemeProvider>
 
