@@ -4,5 +4,7 @@ export * from './pages/Home';
 export * from './routers/routers';
 export * from './styles/breakpoints';
 export * from './styles/GlobalStyles';
+export * from './styles/themes';
+export * from './store/ThemeStore';
 export * from './components/templates/HomeTemplate';
 export * from './components/organismos/sidebar/Sidebar';

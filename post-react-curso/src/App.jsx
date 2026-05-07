@@ -1,19 +1,22 @@
 import { useState } from 'react'
-import { GlobalStyle, MyRouters, Sidebar } from './index' //como es elemento se importa de esta forma
+import { GlobalStyle, MyRouters, Sidebar, useThemeStore } from './index' //como es elemento se importa de esta forma
 import { Device } from './styles/breakpoints'
-import styled from 'styled-components'
+import styled, {ThemeProvider} from 'styled-components'
 
 function App() {
   
-
+  const {themeStyle} = useThemeStore();
   return (
     <>
-      <Container>
-        <GlobalStyle />
-        <section className='contentSideBar'><Sidebar /></section>
-        <section className='contentMenuambur'>menu ambur</section>
-        <section className='contentRouters'><MyRouters /></section>
+    <ThemeProvider theme={themeStyle}>
+        <Container>
+          <GlobalStyle />
+          <section className='contentSideBar'><Sidebar /></section>
+          <section className='contentMenuambur'>menu ambur</section>
+          <section className='contentRouters'><MyRouters /></section>
       </Container>
+    </ThemeProvider>
+
     
     </>
   )
