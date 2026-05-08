@@ -27,34 +27,33 @@ export const DesplegableUser = [
 //data SIDEBAR
 export const LinksArray = [
   {
-    label: "Home",
-    icon: "noto-v1:house",
+    label: "HOME",
+    icon: "lucide:home", // Icono de casa minimalista
     to: "/",
   },
   {
     label: "VENDER",
-    icon: "flat-color-icons:shop",
+    icon: "lucide:shopping-cart", // Icono de carrito para ventas
     to: "/pos",
   },
   {
-    label: "Kardex",
-    icon: "flat-ui:box",
+    label: "KARDEX",
+    icon: "lucide:package", // Icono de caja/paquete para inventario
     to: "/kardex",
   },
   {
-    label: "Reportes",
-    icon: "flat-ui:graph",
+    label: "REPORTES",
+    icon: "lucide:bar-chart-3", // Icono de gráfica de barras
     to: "/reportes",
   },
- 
 ];
 export const SecondarylinksArray = [
  
   {
-    label: "Configuración",
-    icon:"icon-park:setting-two",
+    label: "CONFIGURACIÓN",
+    icon: "lucide:settings", 
     to: "/configurar",
-    color:"#CE82FF"
+
   },
   
   
