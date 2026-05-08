@@ -107,27 +107,39 @@ const Container = styled.div`
   }
   .Logocontent {
     display: flex;
-    justify-content: center;
+    justify-content: ${({ $isopen }) => ($isopen === "true" ? "start" : "center")};
     align-items: center;
     padding-bottom: 60px;
+    padding-left: ${({ $isopen }) => ($isopen === "true" ? "20px" : "0")};
+    transition: all 0.3s ease;
+
     .imgcontent {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 30px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
       transform: ${({ $isopen }) =>
-          $isopen === "true" ? `scale(0.7)` : `scale(1.5)`}
+          $isopen === "true" ? `scale(1)` : `scale(1.2)`}
         rotate(${({ theme }) => theme.logorotate});
+
       img {
         width: 100%;
         animation: flotar 1.7s ease-in-out infinite alternate;
       }
     }
-    h2 {
-      color: #00ddff;
-      display: ${({ $isopen }) => ($isopen === "true" ? `block` : `none`)};
+  h2 {
+      color: ${(props) => props.theme.text};
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      width: ${({ $isopen }) => ($isopen === "true" ? "auto" : "0")};
+      opacity: ${({ $isopen }) => ($isopen === "true" ? "1" : "0")};
+      overflow: hidden; 
+      margin-left: ${({ $isopen }) => ($isopen === "true" ? "5px" : "0")};
     }
   }
   .LinkContainer {

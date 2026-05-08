@@ -1,5 +1,4 @@
 export * from './App';
-export * from './main';
 export * from './routers/routers';
 export * from './store/ThemeStore';
 export * from './pages/Home';

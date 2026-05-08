@@ -27,17 +27,17 @@ const Container = styled.main `
   display: grid;
   transition: all 0.3s ease;
   grid-template-columns: 1fr;
-  background-color: black;
+  background-color: ${(props) => props.theme.bgtotal}; 
+
   .contentSideBar {
     display: none;
-    background-color: rgba(78, 45, 78, 0.5);
   }
   .contentMenuambur {
     position: absolute;
-    background-color: rgba(53, 219, 11, 0.5);
+
   }
   .contentRouters {
-    background-color: rgba(231, 13, 136, 0.5);
+
     grid-column: 1;
     width: 100%;
   }

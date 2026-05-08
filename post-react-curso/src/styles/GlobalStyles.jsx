@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing:border-box;
-        background-color:black;
+        background-color:${(props) =>props.theme.bgtotal}; //pongo "theme" por que en el elemento de themeprovider tambien se utiliza
         font-family: "Poppins", sans-serif;
         color: #fff;
     }
