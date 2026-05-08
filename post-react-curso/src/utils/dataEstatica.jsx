@@ -28,22 +28,22 @@ export const DesplegableUser = [
 export const LinksArray = [
   {
     label: "HOME",
-    icon: "lucide:home", // Icono de casa minimalista
+    icon: "lucide:home",
     to: "/",
   },
   {
     label: "VENDER",
-    icon: "lucide:shopping-cart", // Icono de carrito para ventas
+    icon: "lucide:shopping-cart", 
     to: "/pos",
   },
   {
     label: "KARDEX",
-    icon: "lucide:package", // Icono de caja/paquete para inventario
+    icon: "lucide:package", 
     to: "/kardex",
   },
   {
     label: "REPORTES",
-    icon: "lucide:bar-chart-3", // Icono de gráfica de barras
+    icon: "lucide:bar-chart-3", 
     to: "/reportes",
   },
 ];
