@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Btnsave, InputText2, Title } from '../../index'
+import { Btnsave, InputText2, Linea, Title } from '../../index'
 export function LoginTemplate() {
     return (
     <Container>
@@ -18,6 +18,9 @@ export function LoginTemplate() {
                     <Btnsave titulo="ACCEDER" bgcolor="#c4c4c4" color="0, 0, 0" width="100%"/>
                     </InputText2> {/* como pide hijos, se pone de esta forma */}
                 </form>
+                <Linea >
+                    <span>O</span>
+                </Linea>
 
             </div>
         </section>
