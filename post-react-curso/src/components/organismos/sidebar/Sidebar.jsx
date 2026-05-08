@@ -195,23 +195,41 @@ const Container = styled.div`
 const Main = styled.div`
   .Sidebarbutton {
     position: fixed;
-    top: 70px;
+    top: 80px;
     left: 68px;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: ${(props) => props.theme.bgtgderecha};
-    box-shadow: 0 0 4px ${(props) => props.theme.bg3},
-      0 0 7px ${(props) => props.theme.bg};
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s;
-    z-index: 3;
-    transform: ${({ $isopen }) =>
-      $isopen === "true" ? `translateX(173px) rotate(3.142rad)` : `initial`};
+    z-index: 10;
     color: ${(props) => props.theme.text};
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: ${({ $isopen }) =>
+      $isopen === "true" ? `translateX(173px)` : `initial` };
+    &:hover {
+      transform: ${({ $isopen }) =>
+        $isopen === "true" 
+          ? `translateX(173px) scale(1.1)` 
+          : `scale(1.1)`};
+      background: ${(props) => props.theme.bg5}; /* Un color de tu objeto Light/Dark */
+    }
+
+    &:active {
+      transform: ${({ $isopen }) =>
+        $isopen === "true" 
+          ? `translateX(173px) scale(0.95)` 
+          : `scale(0.95)`};
+    }
+    svg {
+      transition: all 0.3s ease;
+      transform: ${({ $isopen }) =>
+        $isopen === "true" ? `rotate(180deg)` : `rotate(0deg)`};
+    }
   }
 `;
 const Divider = styled.div`

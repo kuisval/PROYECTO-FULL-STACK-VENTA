@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <ThemeProvider theme={themeStyle}>
-        <Container>
+        <Container className = {sidebarOpen?"active":""}> {/* si esta en true se pone active, si no, nada */}
           <GlobalStyle />
           <section className='contentSideBar'>
             <Sidebar state={sidebarOpen} setState={() => setSideBarOpen(!sidebarOpen)} /></section>
@@ -25,6 +25,7 @@ function App() {
 }
 const Container = styled.main `
   display: grid;
+  transition: all 0.3s ease;
   grid-template-columns: 1fr;
   background-color: black;
   .contentSideBar {
@@ -42,7 +43,10 @@ const Container = styled.main `
   }
   //toda la parte de arriba ya controla mobile, por eso no lo pondremos abajo
   @media ${Device.tablet} {
-    grid-template-columns: 88px 1fr;
+    grid-template-columns: 88px 1fr; //Estado CERRADO
+    &.active{
+      grid-template-columns: 260px 1fr; //Estado ya ABIERTO
+    }
     .contentSideBar {
       display: initial;
     }
