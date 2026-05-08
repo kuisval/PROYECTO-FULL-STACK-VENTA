@@ -28,7 +28,7 @@ const Container = styled.main `
   transition: all 0.3s ease;
   grid-template-columns: 1fr;
   background-color: ${(props) => props.theme.bgtotal}; 
-
+  color:${({theme}) => theme.text};
   .contentSideBar {
     display: none;
   }
