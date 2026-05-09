@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 
-export const Linea = styled.div `
+export const Linea = styled.div`
     background-color: ${({ theme }) => theme.color2};
-    height: 2px;
-    border-radius: 15px;
-    margin: 20px 0;
+    height: 1px; 
+    width: 100%;
+    margin: 30px 0;
     position: relative;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     span {
-        top: -15px;
         position: absolute;
-        background-color: #fff;
-        text-align: center;
-        padding: 0 5px;
+        background-color: ${(props) => props.theme.bgtotal};
+        padding: 0 15px;
         color: ${({ theme }) => theme.color2};
         font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
     }
-`
+`;
