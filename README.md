@@ -54,13 +54,6 @@ VITE_SUPABASE_ANON_KEY=tu-anon-key
 npm run dev
 ```
 
-## Base de datos
-
-El script SQL para crear todas las tablas está en [`supabase_schema.sql`](./supabase_schema.sql).
-
-Inclúyelo en: **Supabase → SQL Editor → New query → Run**
-
-Crea las tablas: `productos`, `categorias`, `marcas`, `ventas`, `perfiles` y `empresa`, con RLS activado y un trigger que genera el perfil del usuario automáticamente al registrarse.
 
 ## Estructura del proyecto
 
