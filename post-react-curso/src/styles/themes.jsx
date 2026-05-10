@@ -41,6 +41,8 @@ export const Light = {
 };
 
 export const Dark = {
+    bgAlpha: "rgba(255, 255, 255, 0.05)",
+    bg: "#1b1b1b",
     colortitlecard: "#8C9298",
     colorsubtitlecard: "#F0F0F0",
     bgcards: "#171717",
