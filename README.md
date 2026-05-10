@@ -1,6 +1,6 @@
 # Sistema de Ventas
 
-Aplicación web full stack para gestión de ventas, inventario y configuración de una pequeña empresa. Desarrollada con React, Vite y Supabase.
+Aplicación web full stack para gestión de ventas, inventario y configuración de una pequeña empresa. Desarrollada con React, Vite y Supabase, Desplegada con VERCEL: https://proyecto-full-stack-venta.vercel.app/ .
 
 ## Demo
 
@@ -15,6 +15,7 @@ Aplicación web full stack para gestión de ventas, inventario y configuración 
 - **Zustand** — manejo de estado global
 - **React Router DOM** — navegación entre páginas
 - **Iconify** — íconos
+- **Vercel** - Despliegue de la pagina
 
 ## Funcionalidades
 
