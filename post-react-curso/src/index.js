@@ -1,5 +1,4 @@
 export * from './App';
-export * from './main';
 export * from './context/AuthContent';
 export * from './pages/Configurar';
 export * from './pages/Home';
