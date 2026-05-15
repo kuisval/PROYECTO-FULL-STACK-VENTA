@@ -28,33 +28,6 @@ Aplicación web full stack para gestión de ventas, inventario y configuración 
 - Tema claro / oscuro
 - Diseño responsive — bottom navigation en móvil, sidebar en desktop
 
-## Instalación
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/sistema-ventas.git
-cd sistema-ventas
-
-# Instalar dependencias
-npm install
-
-# Configurar variables de entorno
-cp .env.example .env.local
-```
-
-Agrega tus credenciales de Supabase en `.env.local`:
-
-```env
-VITE_SUPABASE_URL=https://xxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=tu-anon-key
-```
-
-```bash
-# Iniciar en desarrollo
-npm run dev
-```
-
-
 ## Estructura del proyecto
 
 ```
@@ -72,9 +45,3 @@ src/
 └── utils/               # Data estática (links, módulos)
 ```
 
-## Variables de entorno
-
-| Variable | Descripción |
-|---|---|
-| `VITE_SUPABASE_URL` | URL de tu proyecto en Supabase |
-| `VITE_SUPABASE_ANON_KEY` | Clave pública (anon key) de Supabase |
