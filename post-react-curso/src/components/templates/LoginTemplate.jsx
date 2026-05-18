@@ -36,7 +36,7 @@ export function LoginTemplate() {
                     <InputText2>
                         <input
                             className='form__field'
-                            placeholder='Email'
+                            placeholder='Ingresa Sig. Email: empleado1@empresa.com'
                             type='email'
                             value={email}
                             onChange={e => setEmail(e.target.value)}
@@ -45,7 +45,7 @@ export function LoginTemplate() {
                     <InputText2>
                         <input
                             className='form__field'
-                            placeholder='Contraseña'
+                            placeholder='Ingrese Sig. Contraseña: 1234'
                             type='password'
                             value={password}
                             onChange={e => setPassword(e.target.value)}
