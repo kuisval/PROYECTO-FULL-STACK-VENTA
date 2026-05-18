@@ -4,7 +4,8 @@ Aplicación web full stack para gestión de ventas, inventario y configuración 
 
 ## Demo
 
-> 
+> Link:https://proyecto-full-stack-venta.vercel.app/
+> Para iniciar sesión ingrese el siguiente correo: "empleado1@empresa.com" y la siguente contraseña: "1234"
 
 ## Tecnologías
 
