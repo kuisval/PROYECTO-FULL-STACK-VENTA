@@ -49,7 +49,7 @@ export function KardexTemplate() {
 
             {!loading && filtrados.length > 0 && (<>
 
-                {/* ── TARJETAS — solo en móvil ── */}
+                {/*TARJETAS PARA CELULAR */}
                 <div className="cards">
                     {filtrados.map(p => {
                         const estado = getEstado(p.stock, p.stock_minimo);

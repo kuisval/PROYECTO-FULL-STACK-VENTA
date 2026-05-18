@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { supabase } from '../../supabase/supabase.config';
-
+import { useAuthStore } from "../../store/AuthStore";
+import { UserAuth } from "../../context/AuthContent";
 export function ReportesTemplate() {
     const [ventas, setVentas]   = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const { user } = UserAuth();
     useEffect(() => {
         const fetchVentas = async () => {
             const { data } = await supabase
@@ -22,7 +23,7 @@ export function ReportesTemplate() {
     const totalVentas   = ventas.reduce((acc, v) => acc + (v.total || 0), 0);
     const promedioVenta = ventas.length ? totalVentas / ventas.length : 0;
     const ventaMax      = ventas.length ? Math.max(...ventas.map(v => v.total || 0)) : 0;
-
+    const nombre = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Usuario';
     const STATS = [
         { label: 'Total de ventas',    valor: ventas.length,                  color: '#1cb0f6' },
         { label: 'Ingresos totales',   valor: `$${totalVentas.toFixed(2)}`,   color: '#53B257' },
@@ -56,6 +57,7 @@ export function ReportesTemplate() {
                                     <th>#</th>
                                     <th>Fecha</th>
                                     <th>Total</th>
+                                    <th>Autor Venta:</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,6 +66,7 @@ export function ReportesTemplate() {
                                         <td>{i + 1}</td>
                                         <td>{new Date(v.created_at).toLocaleString('es-MX')}</td>
                                         <td className="total">${(v.total || 0).toFixed(2)}</td>
+                                        <td className="autorVenta"> {nombre} </td>
                                     </tr>
                                 ))}
                             </tbody>
